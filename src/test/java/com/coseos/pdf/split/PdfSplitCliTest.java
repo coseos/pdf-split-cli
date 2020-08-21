@@ -26,7 +26,7 @@ public class PdfSplitCliTest {
 	@Test
 	public void givenPdfDocument_whenRun_thenSplitDocument(@TempDir final Path tempdir) throws IOException {
 		// Arrange
-		Path tempfile = tempdir.resolve("test.tif");
+		Path tempfile = tempdir.resolve("test.pdf");
 		final byte[] bytes = Files.readAllBytes(Paths.get("src/test/resources/test.pdf"));
 		Files.write(tempfile, bytes, StandardOpenOption.CREATE);
 		
